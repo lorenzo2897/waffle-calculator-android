@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.silvestri.wafflecalculator.MainActivity">
+
+    <Button
+        android:id="@+id/waffleCountDecrease"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="88dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:text="-"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/waffleCount"
+        app:layout_constraintRight_toLeftOf="@+id/waffleCount"
+        app:layout_constraintTop_toTopOf="@+id/waffleCount"/>
+
+    <Button
+        android:id="@+id/waffleCountIncrease"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="88dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"
+        android:text="+"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/waffleCount"
+        app:layout_constraintLeft_toRightOf="@+id/waffleCount"
+        app:layout_constraintTop_toTopOf="@+id/waffleCount"/>
+
+    <LinearLayout
+        android:id="@+id/waffleCount"
+        android:layout_width="88dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/waffleImage"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:src="@drawable/waffle"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/waffleCountLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/ingredientsList"
+        android:layout_width="368dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waffleCount"
+        app:layout_constraintVertical_bias="0.0">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/startButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Start making waffles"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+</android.support.constraint.ConstraintLayout>
