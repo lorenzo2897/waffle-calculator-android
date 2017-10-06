@@ -8,4 +8,6 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="swipe_for_next_step"><![CDATA[Swipe for the next step >]]></string>
     <string name="share_using">Export ingredients</string>
+    <string name="close">Close</string>
+    <string name="about_waffle_title">About waffle calculator</string>
 </resources>
