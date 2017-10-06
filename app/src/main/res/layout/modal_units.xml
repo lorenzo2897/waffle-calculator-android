@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Volume"
+        android:text="@string/category_volume"
         android:textAppearance="@android:style/TextAppearance.Material.Title"/>
 
     <RadioGroup
@@ -23,14 +23,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="millilitres"/>
+            android:text="@string/unit_millilitres"/>
 
         <RadioButton
             android:id="@+id/vol_floz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="fluid ounces"/>
+            android:text="@string/unit_fluid_ounces"/>
 
     </RadioGroup>
 
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Weight"
+        android:text="@string/category_weight"
         android:textAppearance="@android:style/TextAppearance.Material.Title"/>
 
     <RadioGroup
@@ -51,14 +51,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="grams"/>
+            android:text="@string/unit_grams"/>
 
         <RadioButton
             android:id="@+id/w_oz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ounces"/>
+            android:text="@string/unit_ounces"/>
 
     </RadioGroup>
 
@@ -67,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Small quantities"
+        android:text="@string/category_small_quantities"
         android:textAppearance="@android:style/TextAppearance.Material.Title"/>
 
     <RadioGroup
@@ -79,14 +79,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="teaspoons"/>
+            android:text="@string/unit_teaspoons"/>
 
         <RadioButton
             android:id="@+id/sq_ml"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="millilitres"/>
+            android:text="@string/unit_millilitres"/>
 
     </RadioGroup>
 

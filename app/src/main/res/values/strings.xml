@@ -5,10 +5,64 @@
     <string name="about">About</string>
     <string name="title_activity_recipe">Recipe</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <string name="swipe_for_next_step"><![CDATA[Swipe for the next step >]]></string>
     <string name="share_using">Export ingredients</string>
+    <string name="pick_units_title">Pick units to use for ingredients</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
     <string name="close">Close</string>
     <string name="about_waffle_title">About waffle calculator</string>
+    <string name="start_making_waffles">Start making waffles</string>
+
+    <string name="ingredient_flour">Flour</string>
+    <string name="ingredient_powder">Baking powder</string>
+    <string name="ingredient_salt">Salt</string>
+    <string name="ingredient_sugar">Sugar</string>
+    <string name="ingredient_eggs">Eggs</string>
+    <string name="ingredient_oil">Vegetable oil</string>
+    <string name="ingredient_milk">Milk</string>
+    <string name="ingredient_vanilla">Vanilla</string>
+
+    <string name="category_volume">Volume</string>
+    <string name="category_weight">Weight</string>
+    <string name="category_small_quantities">Small quantities</string>
+
+    <string name="unit_millilitres">millilitres</string>
+    <string name="unit_fluid_ounces">fluid ounces</string>
+    <string name="unit_grams">grams</string>
+    <string name="unit_ounces">ounces</string>
+    <string name="unit_teaspoons">teaspoons</string>
+    <string name="unit_egg">egg</string>
+    <string name="unit_eggs">eggs</string>
+
+    <string name="about_text">Waffle calculator is an app for all your waffle-making needs. \n
+Calculate the ingredients and follow an easy step-by-step recipe for some delicious waffles. \n\n
+© 2017 - Lorenzo Silvestri \n
+Support: waffles@silvestri.io</string>
+
+    <string name="set_timer_button">Set a 5-minute timer</string>
+    <string name="time_remaining_counter">Time remaining: %1$d seconds</string>
     <string name="times_up">Time\'s up!</string>
+    <string name="waffle_notif_title">Your waffle is ready!</string>
+    <string name="waffle_notif_content">The 5 minutes are up</string>
+    
+    <string name="step0_title">Sift the dry ingredients together</string>
+    <string name="step1_title">Separate the egg whites</string>
+    <string name="step2_title">Beat the egg whites</string>
+    <string name="step3_title">Mix egg yolks, milk, oil, vanilla</string>
+    <string name="step4_title">Add to dry ingredients and mix</string>
+    <string name="step5_title">Fold in the egg whites</string>
+    <string name="step6_title">Oil the waffle maker</string>
+    <string name="step7_title">Cook for 5 to 10 minutes</string>
+    <string name="step8_title">Enjoy!</string>
+
+    <string name="step0_description">Get a large bowl and sift the flour, sugar, baking power, and salt.</string>
+    <string name="step1_description">Get another bowl, and separate the egg whites into it.</string>
+    <string name="step2_description">Beat the egg whites until stiff peaks form.</string>
+    <string name="step3_description">In a third bowl, mix together the egg yolks, milk, oil, and vanilla. Stir slightly.</string>
+    <string name="step4_description">Add the egg/milk/oil mix to the bowl with the dry ingredients, and mix well.</string>
+    <string name="step5_description">Fold the egg whites into the mixture</string>
+    <string name="step6_description">With a kitchen towel, spread some oil over the waffle maker to avoid sticking.</string>
+    <string name="step7_description">Pour the batter evenly onto the waffle iron, close it, and let it cook for 5 to 10 minutes.</string>
+    <string name="step8_description">You can store batter in the fridge for up to three days, or freeze it for later.</string>
 </resources>

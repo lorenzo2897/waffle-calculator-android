@@ -3,7 +3,6 @@ package io.silvestri.wafflecalculator;
 
 import android.app.NotificationManager;
 import android.content.Context;
-import android.graphics.Color;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -12,33 +11,32 @@ import android.support.v4.app.NotificationCompat;
 import android.view.View;
 import android.widget.Button;
 
-import static android.R.attr.description;
 
 public class Recipe {
 
 	private Context context;
 
 	String[] titles = new String[]{
-			"Sift the dry ingredients together",
-			"Separate the egg whites",
-			"Beat the egg whites",
-			"Mix egg yolks, milk, oil, vanilla",
-			"Add to dry ingredients and mix",
-			"Fold in the egg whites",
-			"Oil the waffle maker",
-			"Cook for 5 to 10 minutes",
-			"Enjoy!"
+			context.getString(R.string.step0_title),
+			context.getString(R.string.step1_title),
+			context.getString(R.string.step2_title),
+			context.getString(R.string.step3_title),
+			context.getString(R.string.step4_title),
+			context.getString(R.string.step5_title),
+			context.getString(R.string.step6_title),
+			context.getString(R.string.step7_title),
+			context.getString(R.string.step8_title)
 	};
 	String[] descriptions = new String[]{
-			"Get a large bowl and sift the flour, sugar, baking power, and salt.",
-			"Get another bowl, and separate the egg whites into it.",
-			"Beat the egg whites until stiff peaks form.",
-			"In a third bowl, mix together the egg yolks, milk, oil, and vanilla. Stir slightly.",
-			"Add the egg/milk/oil mix to the bowl with the dry ingredients, and mix well.",
-			"Fold the egg whites into the mixture",
-			"With a kitchen towel, spread some oil over the waffle maker to avoid sticking.",
-			"Pour the batter evenly onto the waffle iron, close it, and let it cook for 5 to 10 minutes.",
-			"You can store batter in the fridge for up to three days, or freeze it for later."
+			context.getString(R.string.step0_description),
+			context.getString(R.string.step1_description),
+			context.getString(R.string.step2_description),
+			context.getString(R.string.step3_description),
+			context.getString(R.string.step4_description),
+			context.getString(R.string.step5_description),
+			context.getString(R.string.step6_description),
+			context.getString(R.string.step7_description),
+			context.getString(R.string.step8_description)
 	};
 	int[] images = new int[]{
 			R.drawable.step0_bowl,
@@ -74,7 +72,7 @@ public class Recipe {
 
 	String getStepAction(int index) {
 		if(index == 7) {
-			return "Set a 5-minute timer";
+			return context.getString(R.string.set_timer_button);
 		}
 		return null;
 	}
@@ -88,7 +86,7 @@ public class Recipe {
 					final CountDownTimer timer = new CountDownTimer(5 * 60 * 1000, 1000) {
 						@Override
 						public void onTick(long millisUntilFinished) {
-							((Button) v).setText("Time remaining: " + millisUntilFinished / 1000 + " seconds");
+							((Button) v).setText(context.getString(R.string.time_remaining_counter, millisUntilFinished / 1000));
 						}
 
 						@Override
@@ -126,8 +124,8 @@ public class Recipe {
 	void displayNotification(Context context) {
 		NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context)
 				.setSmallIcon(R.drawable.ic_waffle)
-				.setContentTitle("Your waffle is ready!")
-				.setContentText("The 5 minutes are up")
+				.setContentTitle(context.getString(R.string.waffle_notif_title))
+				.setContentText(context.getString(R.string.waffle_notif_content))
 				.setAutoCancel(true)
 				.setVibrate(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400})
 				.setVisibility(NotificationCompat.VISIBILITY_PUBLIC);

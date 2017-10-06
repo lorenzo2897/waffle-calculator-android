@@ -128,28 +128,28 @@ public class MainActivity extends Activity {
 
 		ingredients.clear();
 
-		ingredients.add(new Ingredient("Flour", units.convert(40 * wafflesToMake, Units.WEIGHT), units.weightUnit(false), units.weightUnit(true)));
+		ingredients.add(new Ingredient(getString(R.string.ingredient_flour), units.convert(40 * wafflesToMake, Units.WEIGHT), units.weightUnit(false), units.weightUnit(true)));
 
-		ingredients.add(new Ingredient("Baking powder", units.convert(4.0 / 6.0 * wafflesToMake, Units.SMALL_QTY), units.smallQtyUnit(false), units.smallQtyUnit(true)));
+		ingredients.add(new Ingredient(getString(R.string.ingredient_powder), units.convert(4.0 / 6.0 * wafflesToMake, Units.SMALL_QTY), units.smallQtyUnit(false), units.smallQtyUnit(true)));
 
-		ingredients.add(new Ingredient("Salt", units.convert(0.5 / 6.0 * wafflesToMake, Units.SMALL_QTY), units.smallQtyUnit(false), units.smallQtyUnit(true)));
+		ingredients.add(new Ingredient(getString(R.string.ingredient_salt), units.convert(0.5 / 6.0 * wafflesToMake, Units.SMALL_QTY), units.smallQtyUnit(false), units.smallQtyUnit(true)));
 
-		ingredients.add(new Ingredient("Sugar", units.convert(10 * wafflesToMake, Units.WEIGHT), units.weightUnit(false), units.weightUnit(true)));
+		ingredients.add(new Ingredient(getString(R.string.ingredient_sugar), units.convert(10 * wafflesToMake, Units.WEIGHT), units.weightUnit(false), units.weightUnit(true)));
 
-		ingredients.add(new Ingredient("Eggs", 2.0 / 6 * wafflesToMake, "egg", "eggs", true));
+		ingredients.add(new Ingredient(getString(R.string.ingredient_eggs), 2.0 / 6 * wafflesToMake, getString(R.string.unit_egg), getString(R.string.unit_eggs), true));
 
-		ingredients.add(new Ingredient("Vegetable oil", units.convert(20 * wafflesToMake, Units.VOLUME), units.volumeUnit(false), units.volumeUnit(true)));
+		ingredients.add(new Ingredient(getString(R.string.ingredient_oil), units.convert(20 * wafflesToMake, Units.VOLUME), units.volumeUnit(false), units.volumeUnit(true)));
 
-		ingredients.add(new Ingredient("Milk", units.convert(90 * wafflesToMake, Units.VOLUME), units.volumeUnit(false), units.volumeUnit(true)));
+		ingredients.add(new Ingredient(getString(R.string.ingredient_milk), units.convert(90 * wafflesToMake, Units.VOLUME), units.volumeUnit(false), units.volumeUnit(true)));
 
-		ingredients.add(new Ingredient("Vanilla", units.convert(1.0 / 6 * wafflesToMake, Units.SMALL_QTY), units.smallQtyUnit(false), units.smallQtyUnit(true)));
+		ingredients.add(new Ingredient(getString(R.string.ingredient_vanilla), units.convert(1.0 / 6 * wafflesToMake, Units.SMALL_QTY), units.smallQtyUnit(false), units.smallQtyUnit(true)));
 
 		ingredientListAdapter.notifyDataSetChanged();
 	}
 
 	void goToRecipe() {
 		Intent intent = new Intent(this, RecipeActivity.class);
-		intent.putExtra(Intent.EXTRA_INDEX, wafflesToMake);
+		//intent.putExtra(Intent.EXTRA_INDEX, wafflesToMake);
 		startActivity(intent);
 	}
 
@@ -170,10 +170,7 @@ public class MainActivity extends Activity {
 	void showAbout() {
 		AlertDialog.Builder alert = new AlertDialog.Builder(this);
 		alert.setTitle(R.string.about_waffle_title);
-		alert.setMessage("Waffle calculator is an app for all your waffle-making needs." +
-				"\nCalculate the ingredients and follow an easy step-by-step recipe for some delicious waffles." +
-				"\n\n© 2017 - Lorenzo Silvestri" +
-				"\nSupport: waffles@silvestri.io");
+		alert.setMessage(R.string.about_text);
 
 		alert.setPositiveButton(R.string.close, null);
 
@@ -182,10 +179,10 @@ public class MainActivity extends Activity {
 
 	void showUnitSelection() {
 		AlertDialog.Builder alert = new AlertDialog.Builder(this);
-		alert.setTitle("Pick units to use for ingredients");
+		alert.setTitle(R.string.pick_units_title);
 		final View view = getLayoutInflater().inflate(R.layout.modal_units, null);
 		alert.setView(view);
-		alert.setPositiveButton("Save", new DialogInterface.OnClickListener() {
+		alert.setPositiveButton(R.string.save, new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int id) {
 					// change prefs
@@ -201,7 +198,7 @@ public class MainActivity extends Activity {
 				}
 			}
 		);
-		alert.setNegativeButton("Cancel", null);
+		alert.setNegativeButton(R.string.cancel, null);
 
 		((RadioButton) view.findViewById(R.id.vol_ml)).setChecked(units.Volume == Units.MILLILITRES);
 		((RadioButton) view.findViewById(R.id.vol_floz)).setChecked(units.Volume == Units.FLUID_OUNCES);

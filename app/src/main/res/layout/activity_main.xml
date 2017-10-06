@@ -94,7 +94,7 @@
         android:layout_marginBottom="4dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:text="Start making waffles"
+        android:text="@string/start_making_waffles"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
