@@ -45,7 +45,7 @@ Support: waffles@silvestri.io</string>
     <string name="times_up">Time\'s up!</string>
     <string name="waffle_notif_title">Your waffle is ready!</string>
     <string name="waffle_notif_content">The 5 minutes are up</string>
-    
+
     <string name="step0_title">Sift the dry ingredients together</string>
     <string name="step1_title">Separate the egg whites</string>
     <string name="step2_title">Beat the egg whites</string>
@@ -65,4 +65,6 @@ Support: waffles@silvestri.io</string>
     <string name="step6_description">With a kitchen towel, spread some oil over the waffle maker to avoid sticking.</string>
     <string name="step7_description">Pour the batter evenly onto the waffle iron, close it, and let it cook for 5 to 10 minutes.</string>
     <string name="step8_description">You can store batter in the fridge for up to three days, or freeze it for later.</string>
+    <string name="unit_ounce">ounce</string>
+    <string name="unit_teaspoon">teaspoon</string>
 </resources>

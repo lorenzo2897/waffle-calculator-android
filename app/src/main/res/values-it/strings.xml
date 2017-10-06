@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Waffle Calculator</string>
+    <string name="about">Info sull\'app</string>
+
+    <string name="about_text">Usa la Waffle Calculator per tutti i tuoi bisogni culinari! \n
+Calcola le quantità degli ingredienti e segui una ricetta facile che risulterà in delle cialde favolose. \n\n
+© 2017 - Lorenzo Silvestri \n
+Supporto: waffles@silvestri.io</string>
+    <string name="about_waffle_title">Informazioni su Waffle Calculator</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="cancel">Annulla</string>
+    <string name="category_small_quantities">Piccole quantità</string>
+    <string name="category_volume">Volume</string>
+    <string name="category_weight">Peso</string>
+    <string name="change_units">Cambia unità di misura</string>
+    <string name="close">Chiudi</string>
+    <string name="export_ingredients">Condividi gli ingredienti</string>
+    <string name="ingredient_eggs">Uova</string>
+    <string name="ingredient_flour">Farina</string>
+    <string name="ingredient_milk">Latte</string>
+    <string name="ingredient_oil">Olio vegetale</string>
+    <string name="ingredient_powder">Lievito in polvere</string>
+    <string name="ingredient_salt">Sale</string>
+    <string name="ingredient_sugar">Zucchero</string>
+    <string name="ingredient_vanilla">Vaniglia</string>
+    <string name="pick_units_title">Scegli le unità di misura da usare</string>
+    <string name="save">Salva</string>
+    <string name="set_timer_button">Contami 5 minuti</string>
+    <string name="share_using">Condividi gli ingredienti</string>
+    <string name="start_making_waffles">Mostrami la ricetta</string>
+    <string name="swipe_for_next_step"><![CDATA[Fai scorrere per il passo successivo >]]></string>
+    <string name="step8_title">Buon appetito!</string>
+    <string name="time_remaining_counter">Tempo rimanente: %1$d secondi</string>
+    <string name="times_up">Pronto!</string>
+    <string name="title_activity_recipe">Ricetta</string>
+    <string name="unit_egg">uovo</string>
+    <string name="unit_eggs">uova</string>
+    <string name="unit_fluid_ounces">oncie fluide</string>
+    <string name="unit_grams">grammi</string>
+    <string name="unit_millilitres">millilitri</string>
+    <string name="unit_teaspoons">cuchiaini</string>
+    <string name="unit_ounces">oncie</string>
+    <string name="waffle_notif_content">I cinque minuti sono trascorsi</string>
+    <string name="waffle_notif_title">La tua cialda è pronta!</string>
+    <string name="step0_description">Prendi una grande scodella e versa la farina, lo zucchero, il lievito, ed il sale.</string>
+    <string name="step0_title">Prepari gli ingredienti secchi</string>
+    <string name="step1_description">Prendi un\'altra scodella e separa i bianchi d\'uovo.</string>
+    <string name="step1_title">Separa i bianchi d\'uovo</string>
+    <string name="step2_description">Sbatti i bianchi d\'uovo fino a formare una nuvola.</string>
+    <string name="step2_title">Sbatti i bianchi</string>
+    <string name="step3_description">In una terza scodella, mescola i tuorli, il latte, l\'olio, e la vaniglia.</string>
+    <string name="step3_title">Mescola tuorli, latte, olio, vaniglia</string>
+    <string name="step4_description">Aggiungi il preparato di uova/latte/olio alla scodella con gli ingredienti secchi (farina e zucchero). Mescola bene.</string>
+    <string name="step4_title">Aggiundi agli ingredienti secchi</string>
+    <string name="step5_description">Aggiungi alla miscela i bianchi d\'uovo sbattuti</string>
+    <string name="step5_title">Aggiungi i bianchi</string>
+    <string name="step6_description">Con un tovagliolo di carta, spalma un velo di olio sulla griglia per evitare che si attacchi.</string>
+    <string name="step6_title">Spalma un velo di olio sulla griglia</string>
+    <string name="step7_description">Versa qualche cuchiaio di miscela sulla griglia, chiudi, e fai cuocere per 5 a 10 minuti.</string>
+    <string name="step7_title">Cuoci per 5 a 10 minuti</string>
+    <string name="step8_description">La miscela può rimanere in frigo fino a tre giorni, oppure venire congelata per una giornata di pioggia.</string>
+    <string name="unit_ounce">oncia</string>
+    <string name="unit_teaspoon">cuchiaino</string>
+</resources>

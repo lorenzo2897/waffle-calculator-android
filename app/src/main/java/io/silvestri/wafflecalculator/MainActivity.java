@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		// load from preferences
-		units = new Units();
+		units = new Units(this);
 		units.loadValues(getSharedPreferences("units", MODE_PRIVATE));
 
 		wafflesToMake = getSharedPreferences("waffles", MODE_PRIVATE).getInt("waffles", 6);

@@ -1,5 +1,6 @@
 package io.silvestri.wafflecalculator;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
 public class Units {
@@ -16,6 +17,11 @@ public class Units {
 	public int Volume;
 	public int Weight;
 	public int Small_qty;
+	private Context context;
+
+	Units(Context context) {
+		this.context = context;
+	}
 
 	void loadValues(SharedPreferences prefs) {
 		Volume = prefs.getInt(Units.VOLUME, Units.MILLILITRES);
@@ -44,14 +50,14 @@ public class Units {
 		if(Weight == Units.GRAMS) {
 			return "g";
 		} else if(Weight == Units.OUNCES) {
-			return plural ? "ounces" : "ounce";
+			return plural ? context.getString(R.string.unit_ounces) : context.getString(R.string.unit_ounce);
 		}
 		return "";
 	}
 
 	String smallQtyUnit(boolean plural) {
 		if(Small_qty == Units.TEASPOONS) {
-			return plural ? "teaspoons" : "teaspoon";
+			return plural ? context.getString(R.string.unit_teaspoons) : context.getString(R.string.unit_teaspoon);
 		} else if(Small_qty == Units.MILLILITRES) {
 			return "ml";
 		}
