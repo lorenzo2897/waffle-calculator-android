@@ -38,15 +38,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
-        android:layout_marginBottom="80dp"
         android:text="description"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="@+id/step_title"
         app:layout_constraintRight_toRightOf="@+id/step_title"
         app:layout_constraintTop_toBottomOf="@+id/step_image"
-        app:layout_constraintBottom_toTopOf="@+id/step_next"
-        />
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/step_action"/>
 
     <TextView
         android:id="@+id/step_next"
@@ -58,6 +58,19 @@
         android:text="@string/swipe_for_next_step"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/step_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/step_next"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 

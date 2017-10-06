@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -98,6 +99,15 @@ public class RecipeActivity extends Activity {
 
 			TextView text_next = (TextView) rootView.findViewById(R.id.step_next);
 			text_next.setVisibility(getArguments().getInt(ARG_SECTION_NUMBER) == 0 ? View.VISIBLE : View.INVISIBLE);
+
+			Button step_action = (Button) rootView.findViewById(R.id.step_action);
+			if(recipe.getStepAction(getArguments().getInt(ARG_SECTION_NUMBER)) != null) {
+				step_action.setText(recipe.getStepAction(getArguments().getInt(ARG_SECTION_NUMBER)));
+				step_action.setVisibility(View.VISIBLE);
+				step_action.setOnClickListener(recipe.getStepActionClickListener(getArguments().getInt(ARG_SECTION_NUMBER)));
+			} else {
+				step_action.setVisibility(View.INVISIBLE);
+			}
 
 			return rootView;
 		}

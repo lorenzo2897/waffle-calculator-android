@@ -10,4 +10,5 @@
     <string name="share_using">Export ingredients</string>
     <string name="close">Close</string>
     <string name="about_waffle_title">About waffle calculator</string>
+    <string name="times_up">Time\'s up!</string>
 </resources>
