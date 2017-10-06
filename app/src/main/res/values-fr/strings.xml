@@ -4,7 +4,7 @@
     <string name="about">A propos</string>
 
     <string name="about_text">Waffle calculator vous aide dans vos exploits en cuisine. \n
-Calculez les quantités des ingrédients and suivez une recette facile pour des gaufres délicieuses. \n\n
+Calculez les quantités des ingrédients et suivez une recette facile pour des gaufres délicieuses. \n\n
 © 2017 - Lorenzo Silvestri \n
 Aide: waffles@silvestri.io</string>
     <string name="about_waffle_title">A propos de Waffle Calculator</string>
@@ -24,7 +24,7 @@ Aide: waffles@silvestri.io</string>
     <string name="ingredient_salt">Sel</string>
     <string name="ingredient_sugar">Sucre</string>
     <string name="ingredient_vanilla">Vanille</string>
-    <string name="pick_units_title">Choissez les unités</string>
+    <string name="pick_units_title">Choisissez les unités</string>
     <string name="save">Sauvegarder</string>
     <string name="set_timer_button">Compter 5 minutes</string>
     <string name="share_using">Partager les ingrédients</string>
@@ -43,21 +43,21 @@ Aide: waffles@silvestri.io</string>
     <string name="unit_teaspoons">cuillères à café</string>
     <string name="waffle_notif_content">Les 5 minutes ont écoulé</string>
     <string name="waffle_notif_title">Votre gaufre est prête!</string>
-    <string name="step0_description">Prenez un grand bol e versez dedans la farine, le sucre, la levure, et le sel.</string>
-    <string name="step0_title">Mixez les ingrédients secs</string>
-    <string name="step1_description">Prenez un autre bol, e séparez les blancs d\'oeuf.</string>
+    <string name="step0_description">Prenez un grand bol et versez dedans la farine, le sucre, la levure, et le sel.</string>
+    <string name="step0_title">Mélangez les ingrédients secs</string>
+    <string name="step1_description">Prenez un autre bol, et séparez les blancs d\'oeuf.</string>
     <string name="step1_title">Séparez les blancs d\'oeuf</string>
     <string name="step2_description">Battez les blancs d\'oeuf jusqu\'à la formation de nuages.</string>
     <string name="step2_title">Battez les blancs d\'oeuf</string>
     <string name="step3_description">Dans un troisième bol, mélangez les jaunes d\'oeuf, le lait, l\'huile, et la vanille.</string>
     <string name="step3_title">Mélangez: jaunes d\'oeuf, lait, huile, vanille</string>
-    <string name="step4_description">Ajoutez le mélange au bol avec les ingrédients secs, e mélangez bien.</string>
+    <string name="step4_description">Ajoutez le mélange au bol avec les ingrédients secs, et mélangez bien.</string>
     <string name="step4_title">Combinez les ingrédients</string>
     <string name="step5_description">Ajoutez les blancs d\'oeuf au mélange.</string>
     <string name="step5_title">Ajoutez les blancs d\'oeuf</string>
     <string name="step6_description">Avec une serviette, passez de l\'huile sur le gaufrier afin d\'éviter que ça colle.</string>
     <string name="step6_title">Passez une couche d\'huile sur le gaufrier</string>
-    <string name="step7_description">Versez la pâte a gaufres dans la moule, fermez, e laissez cuire pendant 5 à 10 minutes.</string>
+    <string name="step7_description">Versez la pâte à gaufres dans la moule, fermez, et laissez cuire pendant 5 à 10 minutes.</string>
     <string name="step7_title">Cuire pendant 5 à 10 minutes</string>
     <string name="step8_description">Vous pouvez garder la pàte à gaufres dans le frigo pendant trois jours, ou le mettre au congélateur.</string>
     <string name="unit_ounce">once</string>
