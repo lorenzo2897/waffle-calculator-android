@@ -1,6 +1,7 @@
 package io.silvestri.wafflecalculator;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -67,6 +68,10 @@ public class MainActivity extends Activity {
 			shareIngredients();
 			return true;
 		}
+		else if (id == R.id.about) {
+			showAbout();
+			return true;
+		}
 
 		return super.onOptionsItemSelected(item);
 	}
@@ -127,5 +132,18 @@ public class MainActivity extends Activity {
 		sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Ingredients for " + String.valueOf(wafflesToMake) + " waffles");
 		sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
 		startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
+	}
+
+	void showAbout() {
+		AlertDialog.Builder alert = new AlertDialog.Builder(this);
+		alert.setTitle("About waffle calculator");
+		alert.setMessage("Waffle calculator is an app for all your waffle-making needs." +
+				"\nCalculate the ingredients and follow an easy step-by-step recipe for some delicious waffles." +
+				"\n\n© 2017 - Lorenzo Silvestri" +
+				"\nSupport: waffles@silvestri.io");
+
+		alert.setPositiveButton("Close", null);
+
+		alert.show();
 	}
 }
