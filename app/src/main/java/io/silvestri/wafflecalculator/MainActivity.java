@@ -64,6 +64,7 @@ public class MainActivity extends Activity {
 		int id = item.getItemId();
 
 		if (id == R.id.export) {
+			shareIngredients();
 			return true;
 		}
 
@@ -112,5 +113,19 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(this, RecipeActivity.class);
 		intent.putExtra(Intent.EXTRA_INDEX, wafflesToMake);
 		startActivity(intent);
+	}
+
+	void shareIngredients() {
+		String shareBody = "Ingredients for " + String.valueOf(wafflesToMake) + " waffles";
+
+		for(Ingredient i : ingredients) {
+			shareBody += "\n- " + i.name + " (" + i.makeQuantityText() + ")";
+		}
+
+		Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+		sharingIntent.setType("text/plain");
+		sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Ingredients for " + String.valueOf(wafflesToMake) + " waffles");
+		sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+		startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
 	}
 }
