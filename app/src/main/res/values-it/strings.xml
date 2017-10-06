@@ -44,7 +44,7 @@ Supporto: waffles@silvestri.io</string>
     <string name="waffle_notif_content">I cinque minuti sono trascorsi</string>
     <string name="waffle_notif_title">La tua cialda è pronta!</string>
     <string name="step0_description">Prendi una grande scodella e versa la farina, lo zucchero, il lievito, ed il sale.</string>
-    <string name="step0_title">Prepari gli ingredienti secchi</string>
+    <string name="step0_title">Prepara gli ingredienti secchi</string>
     <string name="step1_description">Prendi un\'altra scodella e separa i bianchi d\'uovo.</string>
     <string name="step1_title">Separa i bianchi d\'uovo</string>
     <string name="step2_description">Sbatti i bianchi d\'uovo fino a formare una nuvola.</string>
@@ -52,14 +52,14 @@ Supporto: waffles@silvestri.io</string>
     <string name="step3_description">In una terza scodella, mescola i tuorli, il latte, l\'olio, e la vaniglia.</string>
     <string name="step3_title">Mescola tuorli, latte, olio, vaniglia</string>
     <string name="step4_description">Aggiungi il preparato di uova/latte/olio alla scodella con gli ingredienti secchi (farina e zucchero). Mescola bene.</string>
-    <string name="step4_title">Aggiundi agli ingredienti secchi</string>
+    <string name="step4_title">Aggiungi agli ingredienti secchi</string>
     <string name="step5_description">Aggiungi alla miscela i bianchi d\'uovo sbattuti</string>
     <string name="step5_title">Aggiungi i bianchi</string>
     <string name="step6_description">Con un tovagliolo di carta, spalma un velo di olio sulla griglia per evitare che si attacchi.</string>
     <string name="step6_title">Spalma un velo di olio sulla griglia</string>
     <string name="step7_description">Versa qualche cuchiaio di miscela sulla griglia, chiudi, e fai cuocere per 5 a 10 minuti.</string>
     <string name="step7_title">Cuoci per 5 a 10 minuti</string>
-    <string name="step8_description">La miscela può rimanere in frigo fino a tre giorni, oppure venire congelata per una giornata di pioggia.</string>
+    <string name="step8_description">La miscela può rimanere in frigo fino a tre giorni, oppure venire congelata per una giornata più grigia.</string>
     <string name="unit_ounce">oncia</string>
     <string name="unit_teaspoon">cuchiaino</string>
 </resources>
