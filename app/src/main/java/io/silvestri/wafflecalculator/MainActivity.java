@@ -36,6 +36,8 @@ public class MainActivity extends Activity {
 		units = new Units();
 		units.loadValues(getSharedPreferences("units", MODE_PRIVATE));
 
+		wafflesToMake = getSharedPreferences("waffles", MODE_PRIVATE).getInt("waffles", 6);
+
 
 		// set up the ingredients list
 		ingredients = new ArrayList<>();
@@ -100,6 +102,9 @@ public class MainActivity extends Activity {
 		} else {
 			wafflesToMake++;
 		}
+
+		getSharedPreferences("waffles", MODE_PRIVATE).edit().putInt("waffles", wafflesToMake).apply();
+
 		updateWaffleCounts();
 	}
 
@@ -112,6 +117,8 @@ public class MainActivity extends Activity {
 			wafflesToMake--;
 		}
 
+		getSharedPreferences("waffles", MODE_PRIVATE).edit().putInt("waffles", wafflesToMake).apply();
+
 		updateWaffleCounts();
 	}
 
@@ -121,50 +128,21 @@ public class MainActivity extends Activity {
 
 		ingredients.clear();
 
-		if(units.Weight == Units.OUNCES) {
-			ingredients.add(new Ingredient("Flour", 1.41 * wafflesToMake, "ounce", "ounces"));
-		} else {
-			ingredients.add(new Ingredient("Flour", 40 * wafflesToMake, "g", "g"));
-		}
+		ingredients.add(new Ingredient("Flour", units.convert(40 * wafflesToMake, Units.WEIGHT), units.weightUnit(false), units.weightUnit(true)));
 
-		if(units.Small_qty == Units.MILLILITRES) {
-			ingredients.add(new Ingredient("Baking powder", 4 * wafflesToMake, "ml", "ml"));
-		} else {
-			ingredients.add(new Ingredient("Baking powder", 4.0 / 6.0 * wafflesToMake, "teaspoon", "teaspoons"));
-		}
+		ingredients.add(new Ingredient("Baking powder", units.convert(4.0 / 6.0 * wafflesToMake, Units.SMALL_QTY), units.smallQtyUnit(false), units.smallQtyUnit(true)));
 
-		if(units.Small_qty == Units.MILLILITRES) {
-			ingredients.add(new Ingredient("Salt", 0.5 * wafflesToMake, "ml", "ml"));
-		} else {
-			ingredients.add(new Ingredient("Salt", 0.5 / 6.0 * wafflesToMake, "teaspoon", "teaspoons"));
-		}
+		ingredients.add(new Ingredient("Salt", units.convert(0.5 / 6.0 * wafflesToMake, Units.SMALL_QTY), units.smallQtyUnit(false), units.smallQtyUnit(true)));
 
-		if(units.Weight == Units.OUNCES) {
-			ingredients.add(new Ingredient("Sugar", 0.353 * wafflesToMake, "ounce", "ounces"));
-		} else {
-			ingredients.add(new Ingredient("Sugar", 10 * wafflesToMake, "g", "g"));
-		}
+		ingredients.add(new Ingredient("Sugar", units.convert(10 * wafflesToMake, Units.WEIGHT), units.weightUnit(false), units.weightUnit(true)));
 
 		ingredients.add(new Ingredient("Eggs", 2.0 / 6 * wafflesToMake, "egg", "eggs", true));
 
-		if(units.Volume == Units.FLUID_OUNCES) {
-			ingredients.add(new Ingredient("Vegetable oil", 0.7 * wafflesToMake, "fl oz", "fl oz"));
-		} else {
-			ingredients.add(new Ingredient("Vegetable oil", 20 * wafflesToMake, "ml", "ml"));
-		}
+		ingredients.add(new Ingredient("Vegetable oil", units.convert(20 * wafflesToMake, Units.VOLUME), units.volumeUnit(false), units.volumeUnit(true)));
 
-		if(units.Volume == Units.FLUID_OUNCES) {
-			ingredients.add(new Ingredient("Milk", 3.04 * wafflesToMake, "fl oz", "fl oz"));
-		} else {
-			ingredients.add(new Ingredient("Milk", 90 * wafflesToMake, "ml", "ml"));
-		}
+		ingredients.add(new Ingredient("Milk", units.convert(90 * wafflesToMake, Units.VOLUME), units.volumeUnit(false), units.volumeUnit(true)));
 
-		if(units.Small_qty == Units.MILLILITRES) {
-			ingredients.add(new Ingredient("Vanilla", wafflesToMake, "ml", "ml"));
-		} else {
-			ingredients.add(new Ingredient("Vanilla", 1.0 / 6 * wafflesToMake, "teaspoon", "teaspoons"));
-		}
-
+		ingredients.add(new Ingredient("Vanilla", units.convert(1.0 / 6 * wafflesToMake, Units.SMALL_QTY), units.smallQtyUnit(false), units.smallQtyUnit(true)));
 
 		ingredientListAdapter.notifyDataSetChanged();
 	}

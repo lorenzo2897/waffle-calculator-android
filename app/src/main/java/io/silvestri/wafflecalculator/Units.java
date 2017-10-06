@@ -30,4 +30,57 @@ public class Units {
 		editor.putInt(Units.SMALL_QTY, Small_qty);
 		editor.apply();
 	}
+
+	String volumeUnit(boolean plural) {
+		if(Volume == Units.MILLILITRES) {
+			return "ml";
+		} else if(Volume == Units.FLUID_OUNCES) {
+			return "fl oz";
+		}
+		return "";
+	}
+
+	String weightUnit(boolean plural) {
+		if(Weight == Units.GRAMS) {
+			return "g";
+		} else if(Weight == Units.OUNCES) {
+			return plural ? "ounces" : "ounce";
+		}
+		return "";
+	}
+
+	String smallQtyUnit(boolean plural) {
+		if(Small_qty == Units.TEASPOONS) {
+			return plural ? "teaspoons" : "teaspoon";
+		} else if(Small_qty == Units.MILLILITRES) {
+			return "ml";
+		}
+		return "";
+	}
+
+	double convert(double value, String category) {
+		if(category.equals(VOLUME)) {
+			if(Volume == Units.FLUID_OUNCES) {
+				return value * 0.0351951;
+			} else {
+				return value;
+			}
+
+		} else if(category.equals(WEIGHT)) {
+			if(Weight == Units.OUNCES) {
+				return value * 0.035274;
+			} else {
+				return value;
+			}
+
+		} else if(category.equals(SMALL_QTY)) {
+			if(Small_qty == Units.MILLILITRES) {
+				return value * 6;
+			} else {
+				return value;
+			}
+
+		}
+		return 0;
+	}
 }
