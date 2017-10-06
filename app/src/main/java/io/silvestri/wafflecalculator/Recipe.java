@@ -16,7 +16,14 @@ public class Recipe {
 
 	private Context context;
 
-	String[] titles = new String[]{
+	private String[] titles;
+	private String[] descriptions;
+	private int[] images;
+
+	Recipe(Context context) {
+		this.context = context;
+
+		titles = new String[]{
 			context.getString(R.string.step0_title),
 			context.getString(R.string.step1_title),
 			context.getString(R.string.step2_title),
@@ -26,8 +33,9 @@ public class Recipe {
 			context.getString(R.string.step6_title),
 			context.getString(R.string.step7_title),
 			context.getString(R.string.step8_title)
-	};
-	String[] descriptions = new String[]{
+		};
+
+		descriptions = new String[]{
 			context.getString(R.string.step0_description),
 			context.getString(R.string.step1_description),
 			context.getString(R.string.step2_description),
@@ -37,8 +45,9 @@ public class Recipe {
 			context.getString(R.string.step6_description),
 			context.getString(R.string.step7_description),
 			context.getString(R.string.step8_description)
-	};
-	int[] images = new int[]{
+		};
+
+		images = new int[]{
 			R.drawable.step0_bowl,
 			R.drawable.step1_eggs,
 			R.drawable.step2_beat,
@@ -48,10 +57,7 @@ public class Recipe {
 			R.drawable.step6_oil,
 			R.drawable.step7_cook,
 			R.drawable.waffle
-	};
-
-	Recipe(Context context) {
-		this.context = context;
+		};
 	}
 
 	int numberOfSteps() {
