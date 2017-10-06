@@ -1,6 +1,7 @@
 package io.silvestri.wafflecalculator;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -40,6 +41,13 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				decreaseWaffleCount();
+			}
+		});
+
+		findViewById(R.id.startButton).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				goToRecipe();
 			}
 		});
 
@@ -98,5 +106,11 @@ public class MainActivity extends Activity {
 		ingredients.add(new Ingredient("Vanilla", 1.0 / 6 * wafflesToMake, "teaspoon", "teaspoons"));
 
 		ingredientListAdapter.notifyDataSetChanged();
+	}
+
+	void goToRecipe() {
+		Intent intent = new Intent(this, RecipeActivity.class);
+		intent.putExtra(Intent.EXTRA_INDEX, wafflesToMake);
+		startActivity(intent);
 	}
 }
